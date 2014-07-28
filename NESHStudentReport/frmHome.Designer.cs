@@ -30,7 +30,6 @@
         {
             this.cmbSchoolYear = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
-            this.circularProgress = new DevComponents.DotNetBar.Controls.CircularProgress();
             this.btnPrint = new DevComponents.DotNetBar.ButtonX();
             this.btnExit = new DevComponents.DotNetBar.ButtonX();
             this.SuspendLayout();
@@ -56,27 +55,13 @@
             // 
             this.labelX1.BackgroundStyle.Class = "";
             this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX1.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.labelX1.Location = new System.Drawing.Point(22, 20);
+            this.labelX1.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.labelX1.Location = new System.Drawing.Point(36, 25);
             this.labelX1.Name = "labelX1";
-            this.labelX1.Size = new System.Drawing.Size(74, 26);
+            this.labelX1.Size = new System.Drawing.Size(60, 21);
             this.labelX1.TabIndex = 2;
             this.labelX1.Text = "學年度：";
             this.labelX1.Click += new System.EventHandler(this.labelX1_Click);
-            // 
-            // circularProgress
-            // 
-            this.circularProgress.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.circularProgress.BackgroundStyle.Class = "";
-            this.circularProgress.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.circularProgress.Location = new System.Drawing.Point(22, 67);
-            this.circularProgress.Name = "circularProgress";
-            this.circularProgress.Size = new System.Drawing.Size(46, 28);
-            this.circularProgress.Style = DevComponents.DotNetBar.eDotNetBarStyle.OfficeXP;
-            this.circularProgress.TabIndex = 87;
             // 
             // btnPrint
             // 
@@ -110,7 +95,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(287, 113);
-            this.Controls.Add(this.circularProgress);
             this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.labelX1);
@@ -130,7 +114,6 @@
 
         private DevComponents.DotNetBar.Controls.ComboBoxEx cmbSchoolYear;
         private DevComponents.DotNetBar.LabelX labelX1;
-        private DevComponents.DotNetBar.Controls.CircularProgress circularProgress;
         private DevComponents.DotNetBar.ButtonX btnPrint;
         private DevComponents.DotNetBar.ButtonX btnExit;
     }

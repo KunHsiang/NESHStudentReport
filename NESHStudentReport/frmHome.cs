@@ -70,8 +70,6 @@ namespace NESHStudentReport
             if (!string.IsNullOrEmpty(SelectedSchoolYear))
             {
                 this.btnPrint.Enabled = false;
-                this.circularProgress.Visible = true;
-                this.circularProgress.IsRunning = true;
 
                 Task<Document> task = Task<Document>.Factory.StartNew(() =>
                 {
@@ -81,7 +79,12 @@ namespace NESHStudentReport
                     List<string> keys = new List<string>();
                     List<object> values = new List<object>();
                     Dictionary<string, object> mergeKeyValue = new Dictionary<string,object>();
-                    List<Student> Students = DataAccess.GetGradeFrom3To6(SelectedSchoolYear, SelectedStudentIDs);
+                    List<Student> Students = new List<Student>();
+                    
+                    if (this.title.Contains("9"))
+                        Students = DataAccess.GetGrade(SelectedSchoolYear, SelectedStudentIDs, false);
+                    else
+                        Students = DataAccess.GetGrade(SelectedSchoolYear, SelectedStudentIDs, true);
 
                     foreach (Student vStudent in Students)
                     {
@@ -100,8 +103,6 @@ namespace NESHStudentReport
                 task.ContinueWith((x) =>
                 {
                     this.btnPrint.Enabled = true;
-                    this.circularProgress.Visible = false;
-                    this.circularProgress.IsRunning = false;
 
                     if (x.Exception != null)
                         MessageBox.Show(x.Exception.InnerException.Message);
