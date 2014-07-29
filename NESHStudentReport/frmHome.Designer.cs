@@ -102,8 +102,8 @@
             this.MaximumSize = new System.Drawing.Size(295, 140);
             this.MinimumSize = new System.Drawing.Size(295, 140);
             this.Name = "frmHome";
-            this.Text = "學生成績通知單";
-            this.TitleText = "學生成績通知單";
+            this.Text = "學期成績通知單";
+            this.TitleText = "學期成績通知單";
             this.Load += new System.EventHandler(this.frmHome_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

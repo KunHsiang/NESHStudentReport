@@ -18,6 +18,9 @@ namespace NESHStudentReport
         {
             InitializeComponent();
 
+            this.Text = title;
+            this.TitleText = title;
+
             this.title = title;
             this.template = template;
         }
